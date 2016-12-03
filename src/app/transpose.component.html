@@ -1,0 +1,64 @@
+<div class="container">
+  <!-- Page Content goes here -->
+  <div class="row"></div>
+  <div class="row">
+
+    <h4>Columnar Transpose</h4>
+    <!--<div class="col s3 m3">-->
+    <!--<div class="card-panel teal">-->
+    <!--<span class="white-text" >-->
+    <!--<pre [innerHTML]="printkey">-->
+
+    <!--</pre>-->
+    <!--</span>-->
+    <!--</div>-->
+    <!--</div>-->
+
+
+    <p>
+      The columnar transposition cipher is a fairly simple, easy to implement cipher. It is a transposition cipher that
+      follows a simple rule for mixing up the characters in the plaintext to form the ciphertext.
+      Although weak on its own, it can be combined with other ciphers, such as a substitution cipher, the combination of
+      which can be more difficult to break than either cipher on it's own. The ADFGVX cipher uses a columnar
+      transposition to greatly improve its security. </p>
+
+
+  </div>
+
+
+  <div class="row">
+
+    <div class="input-field col s6">
+      <input placeholder="Input Key" id="key" type="text" min="1" [(ngModel)]="key">
+      <label for="key">Key</label>
+    </div>
+    <div class="input-field col s6">
+      <input placeholder="Input Pad Character" id="pc" type="text" [(ngModel)]="pc">
+      <label for="pc">Pad Character</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s6">
+      <textarea id="plaintext" [(ngModel)]='plaintext' placeholder="Type your plain text here"
+                class="materialize-textarea"></textarea>
+      <label for="plaintext">Plaintext</label>
+    </div>
+    <div class="input-field col s6">
+      <textarea id="chipertext" [(ngModel)]='ciphertext' placeholder="type your cipher text here"
+                class="materialize-textarea"></textarea>
+      <label for="chipertext">Ciphertext</label>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s6">
+      <a class="waves-effect waves-light btn" (click)="enkrip(plaintext,key,pc)">Encrypt</a>
+
+    </div>
+    <div class="col s6">
+      <a class="waves-effect waves-light btn" (click)="dekrip(ciphertext,key)">Decrypt</a>
+    </div>
+  </div>
+
+
+</div>

@@ -1,0 +1,45 @@
+<div class="container">
+  <!-- Page Content goes here -->
+  <div class="row"></div>
+  <div class="row">
+    <h4>Vigenere Chiper</h4>
+    <p>
+      The Vigenère cipher is a method of encrypting alphabetic text by using a series of different Caesar ciphers based
+      on the letters of a keyword. It is a simple form of polyalphabetic substitution. The Vigenère (French
+      pronunciation: ​[viʒnɛːʁ]) cipher has been reinvented many times.
+    </p>
+  </div>
+
+  <div class="row">
+
+    <div class="row">
+      <div class="input-field col s12">
+        <input placeholder="Input Key" id="key" type="text" min="1" [(ngModel)]="key">
+        <label for="key">Key</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s6">
+        <textarea id="plaintext" [(ngModel)]='plain' placeholder="Type your plain text here"
+                  class="materialize-textarea"></textarea>
+        <label for="plaintext">Plaintext</label>
+      </div>
+      <div class="input-field col s6">
+        <textarea id="chipertext" [(ngModel)]='cipher' placeholder="type your cipher text here"
+                  class="materialize-textarea"></textarea>
+        <label for="chipertext">Ciphertext</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s6">
+        <a class="waves-effect waves-light btn" (click)="enkrip(plain,key)">Encrypt</a>
+
+      </div>
+      <div class="col s6">
+        <a class="waves-effect waves-light btn" (click)="dekrip(cipher,key)">Decrypt</a>
+      </div>
+    </div>
+  </div>
+
+</div>
